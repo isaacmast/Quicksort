@@ -4,9 +4,9 @@ import random, timeit
 Determines the execution time of a quicksort algorithm given an array 
 of random integers of length arrayLength. I do not own this code. All 
 rights and original code of the quicksort algorithm belong to the 
-OpenDSA hypertextbook project, which is part of algoviz.org. All rights 
-and original code of the wrapper and wrapped functions belong to 
-Xiaonuo Gantan from Python Central. 
+OpenDSA hypertextbook project, which is part of algoviz.org. All 
+rights and original code of the wrapper and wrapped functions belong 
+to Xiaonuo Gantan from Python Central. 
 '''
 
 def wrapper(func, *args, **kwargs):
@@ -79,7 +79,9 @@ def partition(array, left, right, pivot):
             array[right] = temp
     return left
 
-arrayLength = 50
-array = random.sample(range(1, 100), arrayLength)
+arrayLength = 10
+array = random.sample(range(1, 1000), arrayLength)
 wrapped = wrapper(quicksort, array, 0, arrayLength - 1)
+print quicksort(array, 0, arrayLength - 1)
+print
 print timeit.timeit(wrapped, number = 1000)
