@@ -1,21 +1,12 @@
 import random, string, timeit
 
 '''
-<<<<<<< HEAD
 Determines the execution time of a quicksort algorithm given an array, 
 length arrayLength, of random strings, length stringLength. I do not 
 own this code. All rights and original code of the quicksort algorithm 
 belong to the OpenDSA hypertextbook project, which is part of 
 algoviz.org. All rights and original code of the wrapper and wrapped 
 functions belong to Xiaonuo Gantan from Python Central. 
-=======
-Determines the execution time of a quicksort algorithm given an array 
-of random integers of length arrayLength. I do not own this code. All 
-rights and original code of the quicksort algorithm belong to the 
-OpenDSA hypertextbook project, which is part of algoviz.org. All 
-rights and original code of the wrapper and wrapped functions belong 
-to Xiaonuo Gantan from Python Central. 
->>>>>>> ff14d4dd9ee88bf259c734405da224d6f19edc3d
 '''
 
 def wrapper(func, *args, **kwargs):
@@ -86,17 +77,10 @@ def partition(array, left, right, pivot):
             array[right] = temp
     return left
 
-<<<<<<< HEAD
 array = []
 arrayLength = 10
 stringLength = 10
 for i in range(arrayLength):
 	array.append(''.join(random.choice(string.lowercase) for i in range(stringLength)))
-=======
-arrayLength = 10
-array = random.sample(range(1, 1000), arrayLength)
->>>>>>> ff14d4dd9ee88bf259c734405da224d6f19edc3d
 wrapped = wrapper(quicksort, array, 0, arrayLength - 1)
-print quicksort(array, 0, arrayLength - 1)
-print
 print timeit.timeit(wrapped, number = 1000)
