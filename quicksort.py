@@ -2,7 +2,7 @@ import random, string, timeit
 
 '''
 Determines the execution time of a quicksort algorithm given an array, 
-length arrayLength, of random strings, length stringLength. All rights 
+length ARRAYLENGTH, of random strings, length STRINGLENGTH. All rights 
 and original code of the quicksort algorithm belong to the OpenDSA
 hypertextbook project, which is part of algoviz.org. All rights and 
 original code of the wrapper and wrapped functions belong to Xiaonuo
